@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>template</title>
+<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<div class="header-contents">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.header-contents -->
+</header>
+<div class="main-wrapper">
+<section>
+	
+</section>
+</div><!-- /.main-wrapper -->
+<footer>JavaScript Samples</footer>
+<script>
+  
+  var num = prompt("数字を入力してください");
+
+  var fizzbuzz = function(num){
+    if(num % 3 === 0 && num % 5 === 0){
+      return "FizzBuzz!!";
+    }else if(num % 5 === 0){
+      return "Buzz!!";
+    }else if(num % 3 === 0){
+      return "Fizz!!";
+    }else{
+      return num;
+    }
+  }
+ 
+ alert(fizzbuzz(num));
+
+//  応用してみた。numが入力された数値だから、成り立つ fizzbuzzのnumに何かを入れた戻り値がalertに出る
+</script>
+</body>
+</html>

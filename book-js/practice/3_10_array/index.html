@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>template</title>
+<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<div class="header-contents">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.header-contents -->
+</header>
+<div class="main-wrapper">
+<section>
+  <h1>やることリストです。</h1>
+  <ul id="list">
+
+  </ul>
+</section>
+</div><!-- /.main-wrapper -->
+<footer>JavaScript Samples</footer>
+<script>
+  var todo = ["デザインカンプ作成", "データ整理", "勉強会申し込み", "牛乳を買う"];
+  todo.push("歯医者に行く");
+  for (var i = 0; i < todo.length; i++){
+    var li = document.createElement("li");
+    // タグを生成した
+    li.textContent = todo[i];
+    // 生成されたliのtextContent)を[i]ばんめのデータに、している）
+    // liは維持される
+    document.getElementById("list").appendChild(li);
+    // そしてそれをlistの子要素として挿入する。（）のなかのliはタグではなく変数名
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>template</title>
+<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<div class="header-contents">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.header-contents -->
+</header>
+<div class="main-wrapper">
+<section>
+	
+</section>
+</div><!-- /.main-wrapper -->
+<footer>JavaScript Samples</footer>
+<script>
+  var number = Math.floor(Math.random()*6);
+  var answer = parseInt(window.prompt("これから1-5のある数字を当ててもらいます。\n何か入力してください。"))
+
+  var message 
+  if(answer === number){
+    message = "あたり！";
+  }else if(answer < number){
+    message = "残念でした！もっと大きいです。"
+  }else if(answer > number){
+    message = "残念でした！もっと小さいです。"
+  }else{
+    message = "0~5の数字を半角で入力してください。"
+  }
+
+  window.alert(message);
+</script>
+</body>
+</html>
