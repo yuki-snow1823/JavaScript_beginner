@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>template</title>
+<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<div class="header-contents">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.header-contents -->
+</header>
+<div class="main-wrapper">
+<section>
+  <h2>Standards Revival MP3</h2>
+  <div id="list"></div>
+
+  
+</section>
+</div><!-- /.main-wrapper -->
+<footer>JavaScript Samples</footer>
+</body>
+<script>
+  var addZero = function(num, digit){
+    var numString = String(num);
+    while(numString.length < digit){
+      numString = '0' + numString;
+    }
+    return numString;
+  }
+
+  var songs = [
+    // 配列はこのカッコで指定
+    '一番の歌',
+    '二足でもサンダル',
+    'サンバ',
+    '読んでいる胸のどこか奥で',
+    'Dreams come true'
+  ];
+
+  for (var i = 0; i<songs.length; i++){
+    // songs.lengthは多分要素の数。複数あるから。全部出力
+    var paragraph = document.createElement('p');
+    // こ要素にpタグを生成
+    paragraph.textContent = addZero(i + 1, 2) + '. ' + songs[i];
+    // paragraphのtextContent＝テキストの内容を＝より右のものに変えますよということ
+    // ここまで理解
+    document.getElementById('list').appendChild(paragraph);
+    // こようそとして追加するってことかな
+  }
+</script>
+</html>

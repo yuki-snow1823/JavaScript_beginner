@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>template</title>
+<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<div class="header-contents">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.header-contents -->
+</header>
+<div class="main-wrapper">
+<section>
+	
+</section>
+</div><!-- /.main-wrapper -->
+<footer>JavaScript Samples</footer>
+</body>
+<script>
+  var addZero = function(num, digit){
+    // numが桁数を整形する数、digitが実際の桁数
+    var numString = String(num);
+    // 左の命名は自由、今回の意味は「数字を文字にしましたよという意味」
+    while(numString.length < digit){
+      // 文字列（つまり桁数）と、digitの文字数（つまり桁数）を比較している
+      numString = '0' + numString;
+      // 元のやつに文字列0を足すって考えろ
+      // 桁数が足りていない間ずっと0を足すから、揃うんだ
+    }
+    return numString;
+    }
+
+console.log(addZero(1,2));
+// テスト用
+</script>
+</html>
